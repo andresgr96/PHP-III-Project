@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Hair Salon</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Stylists</h1>
+        <hr>
+        <a href="/create_stylist"><button class="btn btn-success">Add a Stylist</button></a>
+        <ul>
+            {% for stylist in stylists %}
+                <li><h3>
+                    {{stylist.getName}}
+                    <a href='/stylist/{{stylist.getId}}/clients'><button class="btn btn-info btn-xs">View Clients</button></a>
+
+                    <a href="/stylist/{{stylist.getId}}/update"><button class="btn btn-warning btn-xs">Edit</button></a>
+
+                    <a href="/stylist/{{stylist.getId}}/delete"><button class="btn btn-danger btn-xs">Delete</button></a>
+                </h3></li>
+            {% endfor %}
+        </ul>
+            <a href="/delete_all" method="delete"><button class="btn btn-danger btn-sm">DELETE ALL</button></a>
+    </div>
+</body>
+</html>
