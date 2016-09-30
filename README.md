@@ -1,4 +1,4 @@
-# _Contact book_
+# _Hair Salon_
 
 #### By _**Andres Garcia**_
 
@@ -9,9 +9,9 @@ _This php application lets you manage a hair salon with stylist and clients_
 
 ## Setup/Installation Requirements
 
-* _Go to_ :  
 * _Clone or download this repository to your local machine_
 * _Open localhost:8000_
+* _Done!_
 
 ## Specs
 
