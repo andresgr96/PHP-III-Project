@@ -1,0 +1,16 @@
+h1, h2{
+  text-align: center;
+}
+img {
+  max-width: 1500px;
+  max-height: 700px;
+  margin-left: 100px;
+}
+.header{
+  margin-top: 100px;
+  font-weight: 600;
+}
+.list{
+  border-style: solid;
+  border-radius: 4px;
+}

@@ -3,26 +3,37 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <title>Hair Salon</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+   <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <title>Salon</title>
 </head>
 <body>
+<div class="navbar navbar-inverse navbar-fixed-top"></div>
     <div class="container">
-        <h1>Stylists</h1>
+     <div class="jumbotron">
+        <h1>Hair Salon</h1>
+     </div>
         <hr>
-        <a href="/create_stylist"><button class="btn btn-success">Add a Stylist</button></a>
+        <div class="jumbotron">
+        <h2>Stylists</h2>
+        <a href="/create_stylist"><button class="btn btn-success btn-block">Add a new Stylist</button></a>
+        <div class = "list">
         <ul>
             {% for stylist in stylists %}
                 <li><h3>
                     {{stylist.getName}}
-                    <a href='/stylist/{{stylist.getId}}/clients'><button class="btn btn-info btn-xs">View Clients</button></a>
+                    <a href='/stylist/{{stylist.getId}}/clients'><button class="btn btn-primary btn-xs">Clients</button></a>
 
-                    <a href="/stylist/{{stylist.getId}}/update"><button class="btn btn-warning btn-xs">Edit</button></a>
+                    <a href="/stylist/{{stylist.getId}}/update"><button class="btn btn-primary btn-xs">Edit</button></a>
 
-                    <a href="/stylist/{{stylist.getId}}/delete"><button class="btn btn-danger btn-xs">Delete</button></a>
+                    <a href="/stylist/{{stylist.getId}}/delete"><button class="btn btn-danger btn-xs">Remove</button></a>
                 </h3></li>
             {% endfor %}
         </ul>
-            <a href="/delete_all" method="delete"><button class="btn btn-danger btn-sm">DELETE ALL</button></a>
+        </div>
+     </div>
+     <img src ="img/salon.jpg">
     </div>
+    <div class="navbar navbar-inverse navbar-fixed-bottom"></div>
 </body>
 </html>

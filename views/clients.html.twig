@@ -3,29 +3,37 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <title>{{stylist.getName}}'s Clients</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles_client.css" rel="stylesheet" type="text/css">
+    <title>Clients</title>
 </head>
 <body>
     <div class="container">
-        <h1>{{stylist.getName}}</h1>
+    <div class="navbar navbar-inverse navbar-fixed-top"></div>
+     <div class = "jumbotron">
+        <h1 class = "header">{{stylist.getName}}</h1>
+      </div>
         <hr>
-        <a href="/"><button class="btn btn-primary">Home</button></a>
-        <h2>Clients:</h2>
+        <a href="/"><button class="btn btn-primary">Back</button></a>
+        <div class = "jumbotron">
+        <h2>Clients for {{stylist.getName}}</h2>
+        <a href="/stylist/{{stylist.getId}}/new_client"><button class="btn btn-success btn-sm">Add a Client</button></a>
         {% for client in clients %}
             <h4>
                 - {{client.getName}}
-                <a href="/stylist/{{stylist.getId}}/clients/{{client.getId}}/update"><button class="btn btn-warning btn-xs">Edit</button></a>
+                <a href="/stylist/{{stylist.getId}}/clients/{{client.getId}}/update"><button class="btn btn-primary btn-xs">Edit</button></a>
 
-                <a href="/stylist/{{stylist.getId}}/clients/{{client.getId}}/delete"><button class="btn btn-danger btn-xs">Delete</button></a>
+                <a href="/stylist/{{stylist.getId}}/clients/{{client.getId}}/delete"><button class="btn btn-danger btn-xs">Remove</button></a>
             </h4>
         {% endfor %}
-        <a href="/stylist/{{stylist.getId}}/new_client"><button class="btn btn-success btn-sm">Add a Client</button></a>
         <br>
+        </div>
         <form action="/stylist/{{stylist.getId}}/delete_all" method="post">
             <input name="_method" type="hidden" value="delete">
 
             <button type="submit" class="btn btn-danger btn-sm">Delete all clients</button>
         </form>
     </div>
+    <div class="navbar navbar-inverse navbar-fixed-bottom"></div>
 </body>
 </html>

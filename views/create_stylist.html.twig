@@ -3,20 +3,26 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <title>Hair Salon</title>
 </head>
 <body>
+<div class="navbar navbar-inverse navbar-fixed-top"></div>
     <div class="container">
-        <h1>Add a Stylist</h1>
-        <button class="btn btn-primary">Home</button>
+     <div class = "jumbotron">
+        <h1>New Stylist</h1>
+      </div>
+         <a href="/"><button class="btn btn-primary">Back</button></a>
 
         <form action="/" method="post">
             <div class="form-group">
-                <label for="name">Name</label>
+                <label for="name">Enter the Stylist's name:</label>
                 <input name="name" class="form-control">
             </div>
-            <button type="submit" class="btn btn-success">Submit</button>
+            <button type="submit" class="btn btn-success">Add Stylist</button>
         </form>
+        <img src = "img/clients.jpg">
     </div>
+    <div class="navbar navbar-inverse navbar-fixed-bottom"></div>
 </body>
 </html>

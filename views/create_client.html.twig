@@ -7,16 +7,20 @@
 </head>
 <body>
     <div class="container">
-        <h1>Add a Client</h1>
-        <a href="/"><button class="btn btn-primary">Home</button></a>
+    <div class="navbar navbar-inverse navbar-fixed-top"></div>
+     <div class = "jumbotron">
+        <h1>New Client</h1>
+     </div>
+        <a href="/"><button class="btn btn-primary">Back</button></a>
 
         <form action="/stylist/{{stylist.getId}}/clients" method="post">
             <div class="form-group">
-                <label for="name">Name</label>
+                <label for="name">Enter the clients name:</label>
                 <input name="name" class="form-control">
             </div>
-            <button type="submit" class="btn btn-success">Submit</button>
+            <button type="submit" class="btn btn-success">Add Client</button>
         </form>
     </div>
+    <div class="navbar navbar-inverse navbar-fixed-bottom"></div>
 </body>
 </html>
